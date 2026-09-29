@@ -1,7 +1,0 @@
-aiohttp
-google-play-scraper
-httpx
-protobuf
-protobuf-decoder
-pymongo>=4.10,<5
-pycryptodome
