@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: f4x-udp
+    runtime: python
+    rootDir: UDP
+    buildCommand: pip install -r requirements.txt
+    startCommand: python Main.py
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DATABASE
+        value: f4x_udp
+      - key: REQUIRE_MONGODB
+        value: "true"
+      - key: DASHBOARD_PASSWORD
+        sync: false
+      - key: REQUIRE_DASHBOARD_PASSWORD
+        value: "true"
